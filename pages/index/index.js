@@ -81,6 +81,13 @@ Page({
             prize_name = that.data.prize_list[1].name
           } else if (tab1 == 3 && tab2 == 3 && tab3 == 3) {
             prize_name = that.data.prize_list[2].name
+            that.setData({
+              ticket_sum: that.data.ticket_sum - 1,
+            })
+          }else{
+            that.setData({
+              ticket_sum: that.data.ticket_sum - 1,
+            })
           }
           if(prize_name != null){
             message = "恭喜 "+that.data.nickname+" 获得 "+prize_name+" ！";
@@ -96,7 +103,6 @@ Page({
           }
           that.setData({
             lottery_btn: true,
-            ticket_sum: that.data.ticket_sum-1,
           })
           if(that.data.ticket_sum <= 0){
             that.setData({
@@ -111,7 +117,7 @@ Page({
         }, 1000);
         clearInterval(resTime);
       }
-    }, 1000);
+    }, 500);
   },
 
   
@@ -123,17 +129,15 @@ Page({
     })
  
     // 摇奖区滚动的总共时长
-    let time = 1500
+    let randomTotalTime = 2000
     if(line == 2){
-      time = 2000
+      randomTotalTime = 2500
     }else if(line == 3){
-      time = 2500
+      randomTotalTime = 3000
     }
-    let randomTotalTime = Math.random() * 1000 + time;
-    randomTotalTime = parseInt(randomTotalTime, 10);
  
     // 每次循环间隔的时间
-    let tempRandom = Math.random() * 300 + 50;
+    let tempRandom = Math.random() * 50 + 100;
     tempRandom = parseInt(tempRandom, 10);
  
     let num = 0; // 设定计数标签，从0开始
