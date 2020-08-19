@@ -123,11 +123,11 @@ Page({
     })
  
     // 摇奖区滚动的总共时长
-    let time = 4500
+    let time = 1500
     if(line == 2){
-      time = 5000
+      time = 2000
     }else if(line == 3){
-      time = 5500
+      time = 2500
     }
     let randomTotalTime = Math.random() * 1000 + time;
     randomTotalTime = parseInt(randomTotalTime, 10);
