@@ -1,4 +1,6 @@
 /**index.wxss**/
+@import '../../style/FZCuQian-M17S.wxss';
+
 Page{
   background: linear-gradient(#fb521c, orange, #fb521c)
 }
