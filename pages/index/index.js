@@ -122,26 +122,23 @@ Page({
       timingFunction: 'ease',
     })
  
-    // 随机生成摇奖区滚动的总共时长
+    // 摇奖区滚动的总共时长
     let randomTotalTime = Math.random() * 1000 + 5000;
     randomTotalTime = parseInt(randomTotalTime, 10);
  
-    // 随即生成每次循环间隔的时间
+    // 每次循环间隔的时间
     let tempRandom = Math.random() * 300 + 50;
     tempRandom = parseInt(tempRandom, 10);
  
     let num = 0; // 设定计数标签，从0开始
     let count = 1; // 循环计数
-    // 设定循环
     let loop = setInterval(function() {
-      num++; // 每次循环加1
+      num++;
       count++;
       if (num > 2) {
-        // 如果计数标签大于2，置为0
         num = 0;
       }
       if (count * tempRandom >= randomTotalTime) {
-        // 到达预定的时间点，停止循环，将图片定位到显示区域中间位置
         animation.translateY(0).step({
           duration: 0
         });
@@ -157,13 +154,12 @@ Page({
  
         handleSet(that);
         count = 0;
-        // 更新结果数组
         let tempArr = that.data.resNum;
         tempArr.push(num);
         that.setData({
           resNum: tempArr
         })
-        clearInterval(loop); // 停止循环
+        clearInterval(loop);
       } else {
         animation.translateY(0).step().translateY(0).step({
           duration: 0
