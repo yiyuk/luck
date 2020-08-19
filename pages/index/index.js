@@ -123,7 +123,13 @@ Page({
     })
  
     // 摇奖区滚动的总共时长
-    let randomTotalTime = Math.random() * 1000 + 5000;
+    let time = 4500
+    if(line == 2){
+      time = 5000
+    }else if(line == 3){
+      time = 5500
+    }
+    let randomTotalTime = Math.random() * 1000 + time;
     randomTotalTime = parseInt(randomTotalTime, 10);
  
     // 每次循环间隔的时间
