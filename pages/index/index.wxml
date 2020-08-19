@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="ticket">
+        <image class="ticket_img_add" src="../img/add.png" mode="widthFix"></image>
+            <text class="ticket_sum">{{ticket_sum}} 张</text>
+        <image class="ticket_img" src="../img/ticket.png" mode="widthFix"></image>
+    </view>
+    <view class="title">
+        <view class="title_left">
+            <text>情报姬</text>
+        </view>
+        <view class="title_right">
+            <view class="title_right_1">
+                <text>第   一   期</text>
+            </view>
+            <view class="title_right_2">
+                <text>福利抽奖</text>
+            </view>
+        </view>
+    </view>
+    <view class="date">
+        <text>活动期限：2020/03/22-2020/04/01</text>
+    </view>
+    <view class="titleimg"></view>
+    <view class="block">
+        <view class="block1">
+            <view class="block2">
+                <view class="block3">
+                    <view class="tiger_border">
+                        <view class="tiger">
+                            <view class="tiger_1" animation="{{ani_tiger_1}}">
+                                <image class="tiger_img" src="{{tab1.src}}" mode="widthFix"></image>
+                            </view>
+                            <view class="tiger_2" animation="{{ani_tiger_2}}">
+                                <image class="tiger_img" src="{{tab2.src}}" mode="widthFix"></image>
+                            </view>
+                            <view class="tiger_3" animation="{{ani_tiger_3}}">
+                                <image class="tiger_img" src="{{tab3.src}}" mode="widthFix"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="block4">
+                    <view class="gift" bindtap="show_prize">
+                        <image class="gift_img" src="../img/gift.png"></image>
+                    </view>
+                    <view wx:if="{{lottery_btn}}" class="lottery" bindtap="getAnmiation">
+                        立即抽奖
+                    </view>
+                    <view wx:if="{{!lottery_btn}}" class="lottery_2">
+                        立即抽奖
+                    </view>
+                </view>
+            </view>
+            <view class="qingbaoji">
+                <image class="block_img" src="../img/titleImg.png" mode="widthFix"></image>
+            </view>
+        </view>
+    </view>
+    <view class="radio">
+        <image class="radio_img" src="../img/volume.png" mode="widthFix"></image>
+        <view style="width:100%;overflow:hidden">
+            <view animation="{{ani_radio}}">
+                <text class="radio_text">{{radio}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="rule">规则说明></view>
+</view>
+
+<block wx:if="{{show_prize}}">
+    <view class="t_prize">
+        <view class="t2_prize">
+        </view>
+        <view class="t3_prize">
+            <view class='title_prize'>
+                <text>获得的奖品</text>
+            </view>
+            <view class="t4_prize">
+                <view wx:for="{{prize}}" wx:for-item="prize" wx:key="*this">
+                    <text class="text_prize">{{prize.name}}</text>
+                </view>
+            </view>
+            <view class='button_prize'>
+                <button class="button" bindtap="cancel">返回</button>
+            </view>
+        </view>
+    </view>
+</block>

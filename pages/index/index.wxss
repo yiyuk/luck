@@ -1,0 +1,265 @@
+/**index.wxss**/
+Page{
+  background: linear-gradient(#fb521c, orange, #fb521c)
+}
+
+.container{
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ticket{
+  width: 95%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 15px 5px 10px 5px;
+}
+
+.ticket_sum{
+  width: 10%;
+  margin: 0px 3px 0px 8px;
+  font-size: 12px;
+}
+
+.ticket_img{
+  width: 13%;
+}
+
+.ticket_img_add{
+  width: 5%;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title_left{
+  font-family: FZCuQian-M17S;
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.title_right{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.title_right_1{
+  font-size: 12px;
+}
+
+.title_right_2{
+  font-weight: 500;
+}
+
+.date{
+  margin-top: 8px;
+  padding: 2px 10px 2px 10px;
+  border: 2rpx solid white;
+  border-radius: 50rpx;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.block{
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.block1{
+  border-radius: 40rpx;
+  background-color: #f9c32b;
+  width: 80%;
+  height: 100%;
+}
+
+.qingbaoji{
+  height: 70rpx;
+  position: relative;
+  bottom: 200rpx;
+  right: 70rpx;
+}
+
+.block_img{
+  width: 180rpx;
+}
+
+.block2{
+  background-color: #ff812c;
+  width: 100%;
+  height: 90%;
+  border-radius: 50rpx;
+}
+
+.block3{
+  background-color: #ff6700;
+  height: 60%;
+  padding: 20px;
+  border-top-left-radius: 47rpx;
+  border-top-right-radius: 47rpx;
+}
+
+.tiger_border{
+  padding: 10px;
+  background-color: #fcdd29;
+  border-radius: 52rpx;
+}
+
+.tiger{
+  background-color: white;
+  border-radius: 50rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.tiger_1, .tiger_2, .tiger_3{
+  width: 33%;
+}
+
+.tiger_img {
+  width: 100%;
+}
+
+.block4{
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.gift, .lottery, .lottery_2{
+  padding: 5px;
+  background-color: #fb521c;
+  color: white;
+  border-radius: 40rpx;
+  letter-spacing: 8rpx;
+}
+
+.gift{
+  width: 30px;
+  padding-left: 10px;
+}
+
+.gift_img{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.lottery{
+  margin-left: 30px;
+  font-size: 20px;
+  padding: 5px 15px 5px 15px;
+}
+
+.lottery_2{
+  margin-left: 30px;
+  font-size: 20px;
+  padding: 5px 15px 5px 15px;
+  background-color: #962603;
+}
+
+.radio{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 10px 5px 10px;
+  border: 2rpx solid white;
+  border-radius: 50rpx;
+  font-size: 12px;
+  width: 65%;
+}
+
+.radio_img{
+  width: 8%;
+  margin-right: 15px;
+}
+
+.rule{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(0, 145, 255);
+  font-size: 10px;
+}
+
+.t_prize{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  color: white;
+}
+
+.t2_prize{
+  opacity: 0.2;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.t3_prize{
+  position: absolute;
+  opacity: 1;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 40%;
+}
+
+.title_prize {
+  padding-left: 5%;
+  background-color: #ff812c;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-top-right-radius: 16rpx;
+  border-top-left-radius: 16rpx;
+}
+
+.t4_prize{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 5%;
+  background-color: orange;
+  text-align: left;
+}
+
+.text_prize{
+  padding: 5px;
+}
+
+.button_prize{
+  width: 100%;
+  background-color: #ff812c;
+  border-bottom-left-radius: 16rpx;
+  border-bottom-right-radius: 16rpx;
+}
+
+.button{
+  color: white;
+  border-radius: 0px;
+  background-color: #ff812c;
+  border-bottom-left-radius: 16rpx;
+  border-bottom-right-radius: 16rpx;
+}
